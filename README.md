@@ -1,2 +1,2 @@
 # DjangoAPI
-An example of a API in Django framewoorks
+An example of a API in Django framework

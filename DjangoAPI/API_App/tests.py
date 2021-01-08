@@ -12,6 +12,7 @@ class APITestCase(TestCase):
         #Create some articles
         Article.objects.create(name = "ART1", description = "DESC1")
         Article.objects.create(name = "ART2", description = "DESC2")
+        #Article.objects.create(name = "ART3", description = "DESC3")
     
     def test_get_all_articles(self):
         self.assertEqual(Article.objects.all().count(), 2)

@@ -21,8 +21,4 @@ jobs:
       - name: Run Django testing
         run: |
           pip3 install --user django
-          cd ..
-          cd ..
-          cd ..
-          cd DjangoAPI
           python3 /manage.py test

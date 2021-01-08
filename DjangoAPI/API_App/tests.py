@@ -40,7 +40,9 @@ class APITestCase(TestCase):
     #GET AN ARTICLE BY ID
     def test_api_get_by_id(self):
         client = Client()
-        response = client.get("/api/articles/1")
+        ## Some bugg happend with MYSQL but not int MYSQLite, the artciles created avobe doesnt free the db slots,
+        #  so the article 1 appears in the position 3, in runtime its doesnt happend :( 
+        response = client.get("/api/articles/3")
         self.assertEqual(response.status_code, 200)
         responsejson = json.loads(response.json()['article'])
         self.assertEqual(len(responsejson), 1)
